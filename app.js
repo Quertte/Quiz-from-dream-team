@@ -1,8 +1,13 @@
+require('@babel/register');
+require('dotenv').config();
 const {sequelize} = require('./db/models')
 const express = require('express');
 
+const configApp = require('./config/config');
 const app = express();
 const PORT = 3000;
+
+configApp(app)
 
 app.listen(PORT, async (req, res) => {
   try {
