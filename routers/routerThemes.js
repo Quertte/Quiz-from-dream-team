@@ -18,8 +18,6 @@ themePageRouter.get('/:id', async (req, res) => {
   console.log(questions);
   res.renderComponent(QuestionList, { questions });
 });
-themePageRouter.post('/:id/check',(req,res)=>{
-  console.log(req.body);
-})
+
 
 module.exports = themePageRouter;

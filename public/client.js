@@ -10,10 +10,14 @@ if (inputVal) {
       method: 'post',
       body: JSON.stringify({
         answer: nashOtvet,
-        theme_id: otvetId,
       }),
     });
-    const data = await res.text();
-    document.querySelector('.form').insertAdjacentHTML('beforeend', data)
+    const data = await res.json();
+    if (data.success) {
+      alert('ТЫ КРАСАВЧИК');
+    } else {
+      alert('Попробуй снова');
+    }
+    // document.querySelector('.form').insertAdjacentHTML('afterend', data);
   });
 }
