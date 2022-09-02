@@ -6,10 +6,9 @@ module.exports = function HomePage(props) {
   return (
     <Layout>
       <Navbar></Navbar>
-      <div className='bg-text'>
-       Давайте сыграем!
+      <div className="bg-text">
+        <p>Ты чего такой хмурый?</p> <p>Давай сыграем!</p>
       </div>
-      
     </Layout>
   );
 };

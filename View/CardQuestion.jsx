@@ -2,6 +2,7 @@ const React = require('react');
 
 module.exports = function CardQuestion({ el }) {
   return (
+    
     <div id={el.id} className="container">
 
       <div>{el.question}</div>
