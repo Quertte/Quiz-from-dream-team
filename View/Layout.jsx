@@ -21,6 +21,7 @@ module.exports = function Layout({ title, children }) {
           crossOrigin="anonymous"
         />
         <link rel="stylesheet" href="/style/layout.css" />
+        <script defer src="/client.js" />
         <title>{title}</title>
       </head>
       <body className="layout">
