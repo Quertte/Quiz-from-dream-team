@@ -3,6 +3,6 @@ const Layout = require('./Layout')
 
 module.exports = function RegistPage() {
   return (<Layout>
-    <h1>Зарегистрируйтесь</h1>
+    <dir className="register">Зарегистрируйтесь</dir>
   </Layout>)
 }
