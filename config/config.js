@@ -4,8 +4,10 @@ const morgan = require('morgan');
 const homePageRouter = require('../routers/routerHome');
 const reactSSR = require('../middlewares/reactSSR');
 const registerPageRouter = require('../routers/routerRegistr');
-const aboutGameRouter = require('../routers/oboutGameRouter');
+
+const aboutGameRouter = require('../routers/aboutGameRouter');
 const themePageRouter = require('../routers/routerThemes');
+
 
 function configApp(app) {
   app.use(morgan('dev'));
