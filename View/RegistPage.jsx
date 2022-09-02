@@ -6,7 +6,7 @@ module.exports = function RegistPage() {
     <Layout>
       <h1>Зарегистрируйтесь</h1>
       <div>
-        <form action="/registration/themes" method="POST">
+        <form action="/registration" method="POST">
           <input type="text" placeholder="Enter Name" name="name" required />
           <button type="submit" className="button"> Тыркни меня!</button>
         </form>
