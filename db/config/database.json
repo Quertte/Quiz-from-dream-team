@@ -1,7 +1,7 @@
 {
   "development": {
-    "username": "user",
-    "password": "postgres",
+    "username": "spirin",
+    "password": "spirin",
     "database": "flachcards",
     "host": "127.0.0.1",
     "dialect": "postgres"
