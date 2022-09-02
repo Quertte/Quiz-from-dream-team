@@ -1,5 +1,5 @@
 const express = require('express')
-const HomePage = require('../VIew/HomePage')
+const HomePage = require('../View/HomePage')
 const homePageRouter = express.Router()
 
 homePageRouter.get('/',(req,res) => {
