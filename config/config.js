@@ -12,7 +12,7 @@ function configApp(app) {
   // app.use(express.static(path.join(`${__dirname}/../`, 'public')));
   app.use(reactSSR);
   app.use('/', homePageRouter);
-  app.use('/',registerPageRouter)
+  app.use('/registration',registerPageRouter)
   app.use('/', aboutGameRouter)
   app.use(express.static('public'))
 
