@@ -5,10 +5,11 @@ const CardQuestion = require('./CardQuestion');
 module.exports = function QuestionPage({ questions }) {
   return (
     <Layout>
-      {/* {themeArr.map((thema) => <Card key={thema.id} thema={thema}/>)} */}
-      <div className="allQuestion">
-        {questions.map((el) => <CardQuestion el={el} />)}
-      </div>
+
+     
+      <div className = "questions">
+        {questions.map(el => <CardQuestion el={el}/>)}
+        </div>
     </Layout>
   );
 };
