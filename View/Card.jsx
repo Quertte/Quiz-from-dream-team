@@ -2,8 +2,10 @@ const React = require('react');
 
 module.exports = function Card({ thema }) {
   return (
-      <a href='#' className={thema.id}>
+    <div className = 'theme'><a href='#' className={thema.id} style={{color:'white'}}>
         { thema.title }
-      </a>
+      </a></div>
+      
+     
   );
 };
