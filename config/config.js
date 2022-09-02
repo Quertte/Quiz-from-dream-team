@@ -1,10 +1,13 @@
-const express = require('express')
+const express = require('express');
 const morgan = require('morgan');
 
-const homePageRouter = require('../routers/routerHome')
+const homePageRouter = require('../routers/routerHome');
 const reactSSR = require('../middlewares/reactSSR');
 const registerPageRouter = require('../routers/routerRegistr');
+
 const aboutGameRouter = require('../routers/aboutGameRouter');
+const themePageRouter = require('../routers/routerThemes');
+
 
 function configApp(app) {
   app.use(morgan('dev'));
@@ -12,10 +15,10 @@ function configApp(app) {
   // app.use(express.static(path.join(`${__dirname}/../`, 'public')));
   app.use(reactSSR);
   app.use('/', homePageRouter);
-  app.use('/',registerPageRouter)
-  app.use('/', aboutGameRouter)
-  app.use(express.static('public'))
-
+  app.use('/registration', registerPageRouter);
+  app.use('/', aboutGameRouter);
+  app.use(express.static('public'));
+  app.use('/themes', themePageRouter);
 }
 
 module.exports = configApp;
