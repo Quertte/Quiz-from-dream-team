@@ -6,9 +6,9 @@ module.exports = function QuestionPage({ questions }) {
   return (
     <Layout>
       {/* {themeArr.map((thema) => <Card key={thema.id} thema={thema}/>)} */}
-      <div>
-        {questions.map(el => <CardQuestion el={el}/>)}
-        </div>
+      <div className="allQuestion">
+        {questions.map((el) => <CardQuestion el={el} />)}
+      </div>
     </Layout>
   );
 };

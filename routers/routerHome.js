@@ -1,9 +1,24 @@
-const express = require('express')
-const HomePage = require('../View/HomePage')
-const homePageRouter = express.Router()
+const express = require('express');
+const HomePage = require('../View/HomePage');
+const { Question } = require('../db/models');
 
-homePageRouter.get('/',(req,res) => {
-  res.renderComponent(HomePage)
-})
+const homePageRouter = express.Router();
 
-module.exports = homePageRouter
+homePageRouter.get('/', (req, res) => {
+  res.renderComponent(HomePage);
+});
+
+homePageRouter.post('/', async (req, res) => {
+  // console.log(req.body);
+  const { theme_id } = req.body;
+  const { answer } = req.body;
+  const findAnswer = await Question.findOne({ where: { theme_id } });
+  const findFromDb = findAnswer.answer;
+  // console.log(findFromDb);
+  if (answer.toLowerCase() === findFromDb.toLowerCase()) {
+    // console.log('ответ правильный');
+    res.send('<div><p>ТЫ ПОБЕДИЛ</p></div>');
+  }
+});
+
+module.exports = homePageRouter;
